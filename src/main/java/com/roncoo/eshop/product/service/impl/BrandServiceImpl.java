@@ -23,6 +23,7 @@ public class BrandServiceImpl implements BrandService{
 	@Override
 	public void add(Brand brand,String operationType) {
 		brandMapper.add(brand);
+		
 		String queue=null;
 		if (operationType==null || "".equals(operationType)) {
 			queue=RabbitQueue.DATA_CHANGE_QUEUE;

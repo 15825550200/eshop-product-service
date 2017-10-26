@@ -24,6 +24,5 @@ public class EshopProductServiceApplication {
 		config.setMaxWaitMillis(1000*10);
 		config.setTestOnBorrow(true);
 		return new JedisPool(config, "192.168.0.223",1111);
-		
 	}
 }
